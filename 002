@@ -1,0 +1,73 @@
+
+####################################
+secret_word ="pear"
+guess = ""
+guess_count = (0)
+guess_limit = (5)
+out_of_guesses = False
+colourblue = "blue"
+colourgreen = "green"
+colour = ()
+correctcolour = False
+name = ""
+ageint = False
+nameconfirm = ""
+nameyes = False
+numguess = "0"
+sixtynine = False
+####################################
+
+########################################################################
+name = input("\nHello, what is your name: ")
+########################################################################
+# age = input("Great to meet you " + name + "! How old are you: ")
+while ageint != True:
+    if age.isnumeric():
+        ageint = True
+    else:
+        ageint = False
+        age = input("Please enter a number " + name + ": ")
+########################################################################
+colour = input("Which colour do you prefer, blue or green? ")
+while correctcolour != True:
+    if colour == colourblue:
+        correctcolour = True
+        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("The calming colour of the sky and the ocean. Great choice!")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    elif colour == colourgreen:
+        correctcolour = True
+        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("The refreshing and peaceful colour of nature. Great choice!")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    else:
+        correctcolour = False
+        colour = input("I'm sorry, please enter blue or green: ")
+########################################################################
+age1 = int(age)
+age2 = (69)
+age3 = age1 + age2
+########################################################################
+print ("\nPlease solve the following equation. ")
+while numguess != "69" and not (sixtynine):
+    numguess = input(str(age3) + " - " + str(age1) + ": ")
+    if numguess == "69":
+        sixtynine == True
+        print ("\nCorrect! My favourite number and position! It is now time for the game to begin!")
+        finalage = input("Press Enter to continue... ")
+    else:
+        sixtynine == False
+        print ("\nNope, please try again!")
+########################################################################
+while guess != secret_word and not(out_of_guesses):
+    print("\nYou have " + (str(guess_limit - guess_count)) + " guesses remaining!")
+    if guess_count < guess_limit:
+        guess = input("Guess the fruit: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print ("\nSorry, you are out of guesses, YOU LOSE!")
+else :
+    print ("\nCongratulations, you guessed the word correctly! You win a bag of " + secret_word + "s and a box of condoms!")
+########################################################################
